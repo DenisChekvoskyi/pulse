@@ -1,109 +1,86 @@
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   .header {
-    flex-direction: column;
-    &__official {
-      margin-top: 13px;
-    }
-    &__contacts {
-      margin-top: 10px;
-    }
-    .button {
-      margin-top: 10px;
-    }
+    justify-content: space-around;
   }
   .promo {
     &__wrapper {
-      align-items: center;
-    }
-    &__header {
-      font-size: 36px;
-      text-align: center;
-    }
-    &__subheader {
-      font-size: 18px;
-      text-align: center;
-    }
-    &__icons {
-      width: 320px;
-      padding: 0 5px 0 5px;
-    }
-    &__icon {
-      font-size: 13px;
-    }
-    &__link {
-      font-size: 14px;
-    }
-  }
-  .benefits {
-    .title {
-      font-size: 22px;
-    }
-    &__wrapper {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 40px;
-    }
-    &__block {
-      width: 300px;
-    }
-    &__icons {
-      margin-top: 30px;
-    }
-    &__subheader {
-      margin-top: 20px;
-    }
-    &__description {
-      margin-top: 5px;
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  .header {
-    padding: 0 10px 0 10px;
-    &__logo {
-      width: 190px;
-    }
-    &__official {
-      font-size: 11px;
-      span {
-        font-size: 13px;
-      }
-    }
-    &__phone {
-      font-size: 12px;
-    }
-    .button {
-      width: 112px;
-      height: 24px;
-      font-size: 10px;
-    }
-  }
-  .promo {
-    &__wrapper {
-      align-items: center;
-    }
-    &__header {
-      font-size: 34px;
-    }
-    &__subheader {
-      font-size: 21px;
-    }
-    &__link {
-      font-size: 14px;
+      margin-right: 30px;
     }
   }
   .benefits {
     &__wrapper {
       justify-content: space-around;
       flex-wrap: wrap;
-      margin-top: 55px;
+    }
+    &__block {
+      margin: 0 15px 0 15px;
+    }
+  }
+  .advice {
+    padding: 50px 0 54px 0;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    &__logo {
+      margin: 15px 15px 0 15px;
+    }
+    flex-wrap: wrap;
+    &__official {
+      margin: 15px 15px 0 15px;
+    }
+    &__contacts {
+      margin: 15px 15px 0 15px;
     }
   }
 }
 
-@media (max-width: 991px) {
-  .container {
-    max-width: 750px;
+@media (max-width: 767px) {
+  .promo {
+    &__wrapper {
+      align-items: center;
+      margin-right: 0;
+    }
+    &__header {
+      font-size: 24px;
+    }
+    &__subheader {
+      font-size: 14px;
+    }
+    &__icons {
+      justify-content: space-around;
+      width: 290px;
+    }
+    &__icon {
+      font-size: 11px;
+      margin: 0 5px 0 5px;
+    }
+    &__link {
+      font-size: 14px;
+    }
+  }
+  .advice {
+    padding-left: 0;
+    .title_left {
+      text-align: center;
+      font-size: 24px;
+      padding: 0 5px;
+    }
+    &__subtitle {
+      text-align: center;
+      font-size: 15px;
+      padding: 0 10px;
+    }
+    .feed-form {
+      align-items: center;
+      width: auto;
+    }
+    .button {
+      &_submit {
+        width: auto;
+      }
+    }
   }
 }
