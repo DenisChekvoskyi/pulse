@@ -36,5 +36,5 @@ $(document).ready(function () {
     });
   }
   toggleSlide(".catalog-item__link");
-  toggleSlide(".catalog-item_back");
+  toggleSlide(".catalog-item__back");
 });
