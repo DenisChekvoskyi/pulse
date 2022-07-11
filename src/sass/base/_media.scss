@@ -1,6 +1,7 @@
 @media (max-width: 991px) {
   .header {
     justify-content: space-around;
+    flex-wrap: wrap;
   }
   .promo {
     &__wrapper {
@@ -20,24 +21,38 @@
     padding: 50px 0 54px 0;
     padding-left: 30px;
   }
-}
-
-@media (max-width: 767px) {
-  .header {
-    &__logo {
-      margin: 15px 15px 0 15px;
+  .carousel {
+    &__inner {
+      width: 600px;
     }
-    flex-wrap: wrap;
-    &__official {
-      margin: 15px 15px 0 15px;
+  }
+  .catalog {
+    &__content {
+      margin-top: 27px;
     }
-    &__contacts {
-      margin: 15px 15px 0 15px;
+    &-item {
+      margin-top: 30px;
     }
+  }
+  .feedback {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
 @media (max-width: 767px) {
+  .header {
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    &__contacts {
+      margin-top: 10px;
+    }
+    &__official {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
   .promo {
     &__wrapper {
       align-items: center;
@@ -80,6 +95,63 @@
     .button {
       &_submit {
         width: auto;
+      }
+    }
+  }
+  .carousel {
+    &__inner {
+      width: 400px;
+    }
+  }
+  .catalog {
+    &__tab {
+      width: 165px;
+      font-size: 16px;
+    }
+  }
+  .footer {
+    &__info {
+      width: 340px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel {
+    &__inner {
+      width: 260px;
+    }
+    .slick-prev,
+    .slick-next {
+      left: -33px;
+      img {
+        width: 15px;
+        height: 25px;
+      }
+    }
+    .slick-next {
+      right: -33px;
+      left: auto;
+    }
+  }
+  .catalog {
+    &__tabs {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__tab {
+      width: 222px;
+      height: 52px;
+    }
+  }
+  .feedback {
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      &__img {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 20px;
       }
     }
   }
