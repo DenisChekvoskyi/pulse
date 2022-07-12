@@ -58,7 +58,7 @@ $(document).ready(function () {
     });
   });
 
-  //valid>
+  //valid form>
   function valideForms(form) {
     $(form).validate({
       rules: {
@@ -82,4 +82,28 @@ $(document).ready(function () {
   valideForms("#consultation-form");
   valideForms("#consultation form");
   valideForms("#order form");
+
+  //mask>
+  $("input[name=tel]").mask("+38(099) 999-99-99");
+
+  //enter email>
+  $("form").submit(function (e) {
+    e.preventDefault();
+
+    if (!$(this).valid()) {
+      return;
+    }
+
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize(),
+    }).done(function () {
+      $(this).find("input").val("");
+      $("#consultation, #order").fadeOut();
+      $(".overlay, #thanks").fadeIn("slow");
+      $("form").trigger("reset");
+    });
+  });
+  return false;
 });
