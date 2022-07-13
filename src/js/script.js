@@ -104,6 +104,18 @@ $(document).ready(function () {
       $(".overlay, #thanks").fadeIn("slow");
       $("form").trigger("reset");
     });
+    return false;
   });
-  return false;
+
+  //scrol uppage>
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1600) {
+      $(".uppage").fadeIn();
+    } else {
+      $(".uppage").fadeOut();
+    }
+  });
+
+  // animals WOW>
+  new WOW().init();
 });
